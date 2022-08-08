@@ -20,4 +20,14 @@ main()
         printf("\t  %3.0f %6.1f\n", fahr, celsius); // "%d\t%d\n"
         fahr = fahr + step;
     }
+
+    printf("----------------------------------\n");
+    printf("Table of temperature Cel. to Far.\n");
+
+    celsius = lower;
+    while (celsius <= upper) {
+        fahr = (9.0 * celsius) / 5.0 + 32;
+        printf("\t  %3.0f %6.1f\n", celsius, fahr);
+        celsius += step;
+    }
 }
