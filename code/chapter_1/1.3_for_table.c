@@ -1,10 +1,13 @@
 #include <stdio.h>
 
-/* печать таблицы температур по Фаренгейту и Цельсию */
+#define LOWER 0 /* нижняя граница таблицы */
+#define UPPER 300 /* верхняя граница */
+#define STEP 20 /* размер шага */
 
+/* печать таблицы температур по Фаренгейту и Цельсию */
 main()
 {
     int fahr;
-    for (fahr = 300; fahr >= 0; fahr = fahr - 20)
+    for (fahr = UPPER; fahr >= LOWER; fahr = fahr - STEP)
         printf("%3d %6.1f\n", fahr, (5.0 / 9.0) * (fahr - 32.0));
 }
