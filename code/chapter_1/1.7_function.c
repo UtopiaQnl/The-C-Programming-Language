@@ -11,12 +11,11 @@ main()
     return 0;
 }
 
-/* возводит base в n-ю степень; n >= 0 */
+/* возводит base в n-ю степень; n >= 0; версия 2 */
 int power(int base, int n)
 {
-    int i, p;
-    p = 1;
-    for (i = 1; i <= n; i++)
+    int p;
+    for (p = 1; n > 0; n--)
         p = p * base;
     return p;
 }
