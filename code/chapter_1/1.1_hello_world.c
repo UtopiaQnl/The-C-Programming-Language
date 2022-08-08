@@ -1,5 +1,9 @@
 #include <stdio.h>
-int main()
+main()
 {
-    printf("здравствуй, мир\n");
+    printf("здравствуй,\\ м\b\bир\n");
+
+    printf("здравствуй, ");
+    printf("мир");
+    printf("\n");
 }
