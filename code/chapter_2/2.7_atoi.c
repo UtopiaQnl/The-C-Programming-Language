@@ -32,13 +32,13 @@ int32_t lower(int32_t num)
     return num;
 }
 
-int64_t atoi(const char* s)
+int64_t atoi(const char* cs)
 {
-    int8_t sign = (s[0] == '-') ? -1 : +1; /* знак числа */
+    int8_t sign = (cs[0] == '-') ? -1 : +1; /* знак числа */
     int64_t number = 0;
 
-    for (size_t i = (sign == -1); s[i] != '\0'; i++) /* '0' <= s[i] && s[i] <= '9' --- alt */
-        number = 10 * number + (s[i] - '0');
+    for (size_t i = (sign == -1); cs[i] != '\0'; i++) /* '0' <= s[i] && s[i] <= '9' --- alt */
+        number = 10 * number + (cs[i] - '0');
 
     number = sign * number;
     return number;
