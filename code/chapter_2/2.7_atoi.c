@@ -1,15 +1,35 @@
 #include <stdio.h>
 #include <inttypes.h>
 
-int64_t atoi(const char* string_number);
+int64_t atoi(const char* string_number);  // переводит строку в число
+int32_t lower(int32_t character);  // принимает символ, возвращает тот же символ но в нижнем регисте
 
 int main(void)
 {
+    size_t i;
+
     char array[][20] = {"109283123", "-238424", "-234", "11", "-2345", "999999"};
-    for (size_t i = 0; i < 6; i++)
+    for (i = 0; i < 6; i++)
         printf("array[%ld] = %10s | %10s + 10 = %" PRId64 "\n", i, array[i], array[i], atoi(array[i]) + 10);
 
+    putchar('\n');
+
+    for (i = 97; i < 123; i++)
+        printf("%c - %c\n", (char)i, lower(i));
+
+    putchar('\n');
+
+    for (i = 65; i < 91; i++)
+        printf("%c - %c\n", (char)i, lower(i));
+
     return 0;
+}
+
+int32_t lower(int32_t num)
+{
+    if ('A' <= num && num <= 'Z')
+        return num + 'a' - 'A';
+    return num;
 }
 
 int64_t atoi(const char* s)
