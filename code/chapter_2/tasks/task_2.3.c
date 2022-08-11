@@ -19,7 +19,7 @@ int main(void)
 
 int64_t htol(const char* cs)
 {
-    if (cs[0] != '0' || toupper(cs[1]) != 'X')
+    if (cs[0] != '0' || toupper(cs[1]) != 'X') // может быть выход за границу
         return -1;
 
     int64_t result = 0;
