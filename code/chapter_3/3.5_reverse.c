@@ -18,10 +18,8 @@ int main(void)
 
 void reverse(char* s)
 {
-    int i, j;
+    int i, j, tmp;
     for (i = 0, j = strlen(s) - 1; i < j; i++, j--) {
-        int tmp = s[j];
-        s[j] = s[i];
-        s[i] = tmp;
+        tmp = s[i], s[i] = s[j], s[j] = tmp;
     }
 }
