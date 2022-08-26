@@ -19,7 +19,7 @@ int32_t day_of_year(const int32_t year, const int32_t month, int32_t day)
     }
     const int32_t leap = year % 4 == 0 && (year % 100 != 0 || year % 400 == 0);
     for (size_t i = 0; i < month; ++i)
-        day += daytab[leap][i];
+        day += *(*(daytab + leap) + i);
     return day;
 }
 
@@ -29,8 +29,10 @@ void month_day(int32_t year, int32_t year_day, int32_t *month, int32_t *day)
 
     int32_t i;
     const int32_t leap = year % 4 == 0 && (year % 100 != 0 || year % 400 == 0);
+
     for (i = 1; year_day > daytab[leap][i]; ++i)
-        year_day -= daytab[leap][i];
+        year_day -= *(*(daytab + leap) + i);
+
     *month = i;
     *day = year_day;
 }
