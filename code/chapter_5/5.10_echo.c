@@ -3,8 +3,8 @@
 
 int main(int32_t argc, char *argv[])
 {
-    for (size_t i = 0; i < argc; ++i)
-        printf("%s%s", argv[i], (i < argc - 1) ? " " : "");
+    while (argc-- > 0)
+        printf((argc > 1) ? "%s " : "%s", *argv++);
     printf("\n");
     return 0;
 }
