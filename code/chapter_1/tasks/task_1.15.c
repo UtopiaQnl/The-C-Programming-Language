@@ -6,8 +6,7 @@
 
 float FahrToCel(float);
 
-int main()
-{
+int main() {
     for (int fahr = 0; fahr <= UPPER; fahr += STEP)
         printf("%3d %6.1f\n", fahr, FahrToCel(fahr));
     return 0;

@@ -2,13 +2,12 @@
 
 /* подсчет цифр, символов-разделителей и прочих символов */
 
-main()
-{
+main() {
     int c, i, nwhite, nother;
     int ndigit[10];  // = {0} ???
     nwhite = nother = 0;
     for (i = 0; i < 10; i++)  // ???
-        ndigit[i] = 0;         // why?!
+        ndigit[i] = 0;        // why?!
     while ((c = getchar()) != EOF) {
         if ('0' <= c && c <= '9')
             ndigit[c - '0']++;

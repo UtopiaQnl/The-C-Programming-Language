@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 /* подсчет вводимых символов; 2-я версия */
-main()
-{
+main() {
     double nc;
     for (nc = 0; getchar() != EOF; ++nc)
         ;

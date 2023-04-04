@@ -2,15 +2,14 @@
 
 #define MAXLINE 1000 /* максимальный размер вводимой строки */
 
-int getline2(char line[], int maxline); // getline2(char, MAXLINE);
+int getline2(char line[], int maxline);  // getline2(char, MAXLINE);
 void copy(char to[], char from[]);
 
 /* печать самой длинной строки */
-int main(void)
-{
-    int len; /* длина текущей строки */
-    int max; /* длина максимальной из просмотренныйх строк */
-    char line[MAXLINE]; /* текущая строка */
+int main(void) {
+    int len;               /* длина текущей строки */
+    int max;               /* длина максимальной из просмотренныйх строк */
+    char line[MAXLINE];    /* текущая строка */
     char longest[MAXLINE]; /* самая длинная строка */
     max = 0;
     while ((len = getline2(line, MAXLINE)) > 0)
@@ -25,8 +24,7 @@ int main(void)
 }
 
 /* getline2: читает строку в s, возвращает длину */
-int getline2(char s[], int lim)
-{
+int getline2(char s[], int lim) {
     int c, i;
     for (i = 0; i < lim - 1 && (c = getchar()) != EOF && c != '\n'; i++)
         s[i] = c;
@@ -39,8 +37,7 @@ int getline2(char s[], int lim)
 }
 
 /* copy: копирует из 'from' в 'to'; to достаточно большой */
-void copy(char to[], char from[])
-{
+void copy(char to[], char from[]) {
     int i;
     i = 0;
     while ((to[i] = from[i]) != '\0')

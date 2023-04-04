@@ -1,6 +1,6 @@
 #include <stdio.h>
-main()
-{
+
+main() {
     printf("здравствуй,\\ м\b\bир\n");
 
     printf("здравствуй, ");
