@@ -1,15 +1,17 @@
-#include <stdio.h>
 #include <math.h>
+#include <stdio.h>
 
 struct point {
     int x;
     int y;
 } a, b, c;
 
-struct ppoint { int* x; int* y; } x, y;
+struct ppoint {
+    int *x;
+    int *y;
+} x, y;
 
-int main(void)
-{
+int main(void) {
     a.x = 5;
     a.y = 10;
 
@@ -20,7 +22,10 @@ int main(void)
 
     printf("*x.x - %d\n*x.y - %d\n\n", *x.x, *x.y);
 
-    struct dot { double x; double y; } p;
+    struct dot {
+        double x;
+        double y;
+    } p;
     p.x = 4.0;
     p.y = 3.0;
 
@@ -31,7 +36,10 @@ int main(void)
 
     printf("dist - %f\n", dist);
 
-    struct rect { struct dot pt1; struct dot pt2; } screen;
+    struct rect {
+        struct dot pt1;
+        struct dot pt2;
+    } screen;
 
     screen.pt1.x = 1.0;
     screen.pt1.y = 1.0;
@@ -45,4 +53,3 @@ int main(void)
 
     return 0;
 }
-

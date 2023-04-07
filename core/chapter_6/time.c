@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include <inttypes.h>
+#include <stdio.h>
 
 typedef int Hour;
 typedef int Minute;
@@ -13,8 +13,7 @@ typedef struct time {
 
 Time addminutes(Time, Minute);
 
-int main(void)
-{
+int main(void) {
     Hour h = 16;
     Minute m = 14;
     Second s = 56;
@@ -35,8 +34,7 @@ int main(void)
     return 0;
 }
 
-Time addminutes(Time t, Minute m)
-{
+Time addminutes(Time t, Minute m) {
     Hour h, d;
 
     t.minute += m;
